@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M.Abu khalil</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap; /* يسمح للصناديق بالتكيف مع حجم الشاشة */
+        justify-content: space-around; /* توزيع الصناديق بشكل متساوي */
+      }
+
+      .box {
+        background-color: #ffffff;
+        border-radius: 10px;
+        width: calc(45% - 20px); /* عرض الصندوق */
+        margin: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .box:hover {
+        transform: scale(1.05); /* تكبير الصندوق عند التمرير */
+      }
+
+      img {
+        width: 100%; /* عرض الصورة بالكامل */
+        height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+        border-radius: 10px; /* زوايا دائرية للصورة */
+      }
+
+      video {
+        width: 100%; /* عرض الفيديو بالكامل */
+        height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+        border-radius: 10px; /* زوايا دائرية للفيديو */
+      }
+
+      h2 {
+        color: #333; /* لون العنوان */
+      }
+
+      @media (max-width: 768px) {
+        .box {
+          width: calc(100% - 20px); /* عرض الصندوق في الشاشات الصغيرة جدًا */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">محتوى جديد 2024</h1>
+    <div class="container">
+      <div class="box">
+        <h2>ملف شرح الدرس الاول</h2>
+        <a href="#">
+          <img src="image/بور.jpg" alt="صورة" />
+        </a>
+      </div>
+      <div class="box">
+        <h2>فيديو شرح الدرس الاول</h2>
+        <video controls>
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4"
+          />
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+    </div>
+  </body>
+</html>

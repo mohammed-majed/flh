@@ -1,0 +1,256 @@
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          /* padding: 20px; */
+      }
+
+      .container {
+          display: flex;
+          flex-wrap: wrap;
+          /* يسمح للصناديق بالتكيف مع حجم الشاشة */
+          justify-content: space-around;
+          /* توزيع الصناديق بشكل متساوي */
+      }
+
+      .box {
+          background-color: #ffffff;
+          border-radius: 10px;
+          width: calc(33% - 20px);
+          /* عرض الصندوق */
+          margin: 10px;
+          padding: 15px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          transition: transform 0.3s;
+      }
+
+      .box:hover {
+          transform: scale(1.05);
+          /* تكبير الصندوق عند التمرير */
+      }
+
+      img {
+          width: 100%;
+          /* عرض الصورة بالكامل */
+          height: auto;
+          /* الحفاظ على نسبة العرض إلى الارتفاع */
+          border-radius: 10px;
+          /* زوايا دائرية للصورة */
+      }
+
+      button {
+          background-color: #007bff;
+          /* لون زر الانتقال */
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+      }
+
+      button:hover {
+          background-color: #0056b3;
+          /* لون الزر عند التمرير */
+      }
+
+      @media (max-width: 768px) {
+          .box {
+              width: calc(50% - 20px);
+              /* عرض الصندوق في الشاشات الأصغر */
+          }
+      }
+
+      @media (max-width: 480px) {
+          .box {
+              width: calc(100% - 20px);
+              /* عرض الصندوق في الشاشات الصغيرة جدًا */
+          }
+      }
+
+      a {
+          text-align: center;
+          color: #f4f4f4;
+          text-decoration: none;
+      }
+
+      /* تصميم الناف بار */
+      .navbar {
+          display: flex;
+          justify-content: space-between;
+          /* توزيع العناصر */
+          align-items: center;
+          /* توسيط العناصر عمودياً */
+          background-color: #007bff;
+          /* لون خلفية الناف بار */
+          padding: 15px 20px;
+          color: white;
+      }
+
+      .navbar .logo {
+          font-size: 1.5rem;
+          font-weight: bold;
+      }
+
+      .navbar ul {
+          list-style: none;
+          /* إزالة النقاط من القائمة */
+          display: flex;
+          /* عرض العناصر في صف */
+          margin: 0;
+          padding: 0;
+      }
+
+      .navbar ul li {
+          margin-left: 20px;
+          /* مسافة بين العناصر */
+      }
+
+      .navbar ul li a {
+          color: white;
+          /* لون النص */
+          text-decoration: none;
+          /* إزالة التسطير */
+          padding: 10px;
+          transition: background-color 0.3s;
+          /* تأثير عند التمرير */
+      }
+
+      .navbar ul li a:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+          /* تأثير عند التمرير */
+      }
+
+      /* زر القائمة المنسدلة في الشاشات الصغيرة */
+      .navbar .toggle {
+          display: none;
+          /* إخفاء الزر في الشاشات الكبيرة */
+          font-size: 30px;
+          cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+          .navbar ul {
+              display: none;
+              /* إخفاء القائمة في الشاشات الصغيرة */
+              flex-direction: column;
+              /* عرض العناصر عمودياً */
+              position: absolute;
+              /* جعلها فوق المحتوى */
+              top: 64px;
+              /* موقع القائمة المنسدلة */
+              left: 196px;
+              width: 53%;
+              background-color: #007bff;
+              /* لون خلفية القائمة المنسدلة */
+              z-index: 1;
+              /* جعلها فوق المحتوى الآخر */
+              direction: rtl;
+          }
+
+          .navbar ul.active {
+              display: flex;
+              /* عرض القائمة عند تفعيلها */
+          }
+
+          .navbar .toggle {
+              display: block;
+              /* عرض زر القائمة المنسدلة في الشاشات الصغيرة */
+          }
+      }
+
+      footer {
+          background-color: #007bff;
+          /* لون خلفية الفوتر */
+          color: white;
+          padding: 20px;
+          text-align: center;
+      }
+
+      .footer-content {
+          max-width: 800px;
+          /* عرض أقصى للفوتر */
+          margin: 0 auto;
+          /* توسيط الفوتر */
+      }
+
+      h2 {
+          margin-bottom: 15px;
+      }
+
+      .contact-info {
+          margin-bottom: 15px;
+      }
+
+      .contact-info p {
+          margin: 5px 0;
+          /* مسافة بين الفقرات */
+      }
+
+      .search-container {
+          margin-top: 15px;
+      }
+
+      input[type="text"] {
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+          width: calc(70% - 20px);
+          /* عرض خانة البحث */
+      }
+
+      input[type="submit"] {
+          padding: 10px 15px;
+          border-radius: 5px;
+          border: none;
+          background-color: #0056b3;
+          /* لون زر البحث */
+          color: white;
+          cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+          background-color: #004494;
+          /* لون الزر عند التمرير */
+      }
+
+      @media (max-width: 768px) {
+          input[type="text"] {
+              width: calc(100% - 20px);
+              /* عرض خانة البحث في الشاشات الصغيرة */
+              margin-bottom: 10px;
+              /* مسافة أسفل خانة البحث */
+          }
+      }
+
+      .header {
+          width: 100%;
+          /* عرض كامل */
+          height: 350px;
+          /* الطول المطلوب */
+          background-color: #f4f4f4;
+          /* لون الخلفية */
+          color: white;
+          /* لون النص */
+          display: flex;
+          /* استخدام فليكس لتمركز المحتوى */
+          justify-content: center;
+          /* تمركز أفقي */
+          align-items: center;
+          /* تمركز عمودي */
+          text-align: center;
+          /* محاذاة النص في المنتصف */
+      }
+
+      .imghe {
+
+          width: 17%;
+      }
+
+      @media (max-width: 768px) {
+          .imghe {
+              width: 65%;
+
+          }
+      }
